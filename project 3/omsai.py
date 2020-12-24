@@ -1,0 +1,10 @@
+from tkinter import *
+root=Tk()
+root.title("0")
+root1=Tk()
+root1.title("1")
+root2=Tk()
+root2.title("2")
+root3=Tk()
+root3.title("3")
+root2.lift()

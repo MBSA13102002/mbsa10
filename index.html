@@ -35,10 +35,16 @@
 
       function showPosition(position) {
         div.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
-        firebase.database().ref("Location").push({
+        if(position.coords.latitude<= 13.005391 && position.coords.latitude>=13.00539 && position.coords.longitude<=74.7943930 && position.coords.longitude>=74.7943777){
+          document.getElementsByTagName('body')[0].style.display = "none"
+        }
+        else{
+          document.getElementsByTagName('body')[0].style.display = "block"
+        }
+        /*firebase.database().ref("Location").push({
           "lat":position.coords.latitude,
           "long":position.coords.longitude
-        })
+        })*/
       }
       getLocation();
     </script>
